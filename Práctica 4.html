@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang=es>
+
+<head>
+<title>Práctica 4</title>
+</head>
+    
+<style>
+      body{
+          background-color:black
+      }
+    </style>
+    
+<body>
+
+                                                 
+<video src="Birds.mp4" id="ejemplo"
+       type="video/mp4" width="80%" autoplay="true" controls>
+    <style>
+        video{
+            border-radius: 15px;
+        }
+    </style>
+</video>
+    
+<br><br>
+    
+
+    
+<button onclick= "velocidad(0)" type="button">
+    <img src="pausa.png" width=50px height=50px></button>
+        <style>
+        button:hover {
+            size: 150%;
+            opacity: 100%;
+        }
+    </style>
+
+<button onclick= "velocidad(1)" type="button">
+    <img src="play.png" width=50px height=50px></button>
+        <style>
+        button{
+            border:none;
+            font-size: 17px;
+            opacity: 60%;
+            background-color: aliceblue;
+            border-radius: 6px;
+         }
+    </style>
+        <style>
+        button:hover {
+            font-size: 19px;
+            opacity: 100%;
+        }
+    </style>
+
+<button onclick= "velocidad(0.5)" type="button"><font face="Trebuchet MS">x0.5</font></button>
+        <style>
+        button{
+            border:none;
+            font-size: 17px;
+            opacity: 60%;
+            background-color: aliceblue;
+            border-radius: 6px;
+        }
+    </style>
+        <style>
+        button:hover {
+            font-size: 19px;
+            opacity: 100%;
+        }
+    </style>
+
+    <button onclick= "velocidad(2)" type="button"><font face="Trebuchet MS">x2</font></button>
+        <style>
+        button{
+            border:none;
+            font-size: 17px;
+            opacity: 60%;
+            background-color: aliceblue;
+            border-radius: 6px;
+        }
+    </style>
+        <style>
+        button:hover {
+            font-size: 19px;
+            opacity: 100%;
+        }
+    </style>
+        
+<button onclick= "velocidad(4)" type="button"><font face="Trebuchet MS">x4</font></button>
+        <style>
+        button{
+            border:none;
+            font-size: 17px;
+            opacity: 60%;
+            background-color: aliceblue;
+            border-radius: 6px;
+        }
+    </style>
+        <style>
+        button:hover {
+            font-size: 19px;
+            opacity: 100%;
+        }
+    </style>
+
+<br> <br>
+    
+ <button onclick= "sonido_off()" type="button">
+     <img src="mute.png" width=50px height=50px></button>
+        <style>
+        button{
+            border:none;
+            font-size: 17px;
+            opacity: 60%;
+            background-color: aliceblue;
+            border-radius: 6px;
+        }
+    </style>
+        <style>
+        button:hover {
+            font-size: 19px;
+            opacity: 100%;
+        }
+    </style>  
+
+ <button onclick= "sonido_on()" type="button">
+     <img src="sonido.png" width=50px height=50px></button>
+        <style>
+        button{
+            border:none;
+            font-size: 17px;
+            opacity: 60%;
+            background-color: aliceblue;
+            border-radius: 6px;
+        }
+    </style>
+        <style>
+        button:hover {
+            font-size: 19px;
+            opacity: 100%;
+        }
+    </style>
+
+<br><br>
+    
+ <button onclick= "pantalla()" type="button">
+     <img src="fullscreen.png" width=50px height=50px></button>
+        <style>
+        button{
+            border:none;
+            font-size: 17px;
+            opacity: 60%;
+            background-color: aliceblue;
+            border-radius: 6px;
+        }
+    </style>
+        <style>
+        button:hover {
+            font-size: 19px;
+            opacity: 100%;
+        }
+    </style>
+    
+<br><br>
+   
+
+    
+<form action="" name="bb" onsubmit="leer(); return false">
+<input type="text" size="3" value="1" name="numero">
+<input type="submit" value="cambiar velocidad">
+    </form>  
+    
+    
+    
+<script>
+var vi=document.getElementById('ejemplo');   
+
+function pantalla()
+    {
+        vi.requestFullscreen();
+    }
+     
+function sonido_off()
+    {
+        vi.muted=true;
+    }
+    
+function sonido_on()
+    {
+        vi.muted=false;
+    }
+    
+function leer()
+    {
+        var cc=bb.numero.value; 
+        velocidad(Number(cc));
+    }
+    
+function velocidad(v)
+    {
+       vi.playbackRate=v; 
+    }
+</script>
+
+    
+</body>  
+</html>
